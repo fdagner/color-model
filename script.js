@@ -5,7 +5,7 @@ function updateColor() {
 
     var hexColor = rgbToHex(red, green, blue);
     updateSVG(red, green, blue);
-    document.getElementById('hexCode').textContent = 'Hex-Code: ' + hexColor;
+    document.getElementById('hexCode').innerHTML = 'RGB:  ' + red + ', ' + green + ', ' + blue + '<br>Hex-Code: ' + hexColor;
 }
 
 function rgbToHex(r, g, b) {
@@ -28,7 +28,29 @@ function updateSVG(red, green, blue) {
     document.getElementById('colorMixer').innerHTML = svg;
 }
 
-// Call updateColor when the document is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     updateColor();
+});
+
+function updateColorCMYK() {
+    var cyan = document.getElementById('cyanSlider').value;
+    var magenta = document.getElementById('magentaSlider').value;
+    var yellow = document.getElementById('yellowSlider').value;
+
+    var r = 255 * (1 - cyan / 100);
+    var g = 255 * (1 - magenta / 100);
+    var b = 255 * (1 - yellow / 100);
+
+    r = Math.min(255, Math.max(0, Math.round(r)));
+    g = Math.min(255, Math.max(0, Math.round(g)));
+    b = Math.min(255, Math.max(0, Math.round(b)));
+
+    var resultDiv = document.getElementById('result');
+    resultDiv.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+    document.getElementById('cmykCode').innerHTML = 'CMYK: ' + cyan + '%, ' + magenta + '%, ' + yellow + '%<br>RGB: ' + r + ', ' + g + ', ' + b;
+
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    updateColorCMYK();
 });

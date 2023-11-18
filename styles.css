@@ -1,24 +1,23 @@
 #rgb-container {
     width: 100%;
     min-width: 400px;
-    max-width: 800px;    
+    max-width: 800px;
     margin: 0 auto;
 }
 
 #colorMixer {
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 #hexCode {
     margin-top: 20px;
-    font-weight: bold;
 }
 
 #colorMixer svg {
-        margin-top: 20px;
-        width: 50%;
+    margin-top: 20px;
+    width: 50%;
 }
 
 .isolate {
@@ -29,3 +28,11 @@ circle {
     mix-blend-mode: screen;
 }
 
+#result {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
