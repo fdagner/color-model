@@ -24,7 +24,7 @@
         <h3>Farben kombinieren:</h3>
         <p>Verändere die RGB-Werte, um die Farbe zu generieren. Der RGB- und der Hexadezimalcode und die dargestellte
             Farbe werden automatisch aktualisiert.</p>
-
+        <div class="flex-container">
         <label for="redInput">Rot:</label>
         <input type="range" id="redInput" min="0" max="255" value="255" oninput="updateColor()">
 
@@ -33,7 +33,7 @@
 
         <label for="blueInput">Blau:</label>
         <input type="range" id="blueInput" min="0" max="255" value="255" oninput="updateColor()">
-
+        </div>
         <hr style="margin-top: 50px;">
         <h2>CMYK-Farbmodell</h2>
         <p>Das CMYK-Farbmodell steht für Cyan, Magenta, Yellow und Key (Schwarz). Es wird vor allem in der
@@ -51,14 +51,14 @@
         <h3>Farben kombinieren:</h3>
         <p>Verändere die CYM-Werte, um die Farbe zu generieren. Der CMYK- und der RGB-Code und die dargestellte
             Farbe werden automatisch aktualisiert.</p>
-        <label for=" cyanSlider">Cyan:</label>
+        <div class="flex-container">
+        <label for="cyanSlider">Cyan:</label>
         <input type="range" id="cyanSlider" min="0" max="100" value="0" oninput="updateColorCMYK()">
-
         <label for="magentaSlider">Magenta:</label>
         <input type="range" id="magentaSlider" min="0" max="100" value="0" oninput="updateColorCMYK()">
-
         <label for="yellowSlider">Yellow:</label>
         <input type="range" id="yellowSlider" min="0" max="100" value="0" oninput="updateColorCMYK()">
+        </div>
     </div>
 
     <script src="script.js"></script>
