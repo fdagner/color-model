@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Farbmodell</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="rgb-container">
+    <h2>RGB-Farbmodell</h2>
+    <p>Das RGB-Modell steht für "Rot, Grün, Blau" und ist ein additives Farbmodell, das in der Darstellung von Farben verwendet wird. In diesem Modell werden Farben durch die Kombination von verschiedenen Intensitäten der Grundfarben Rot, Grün und Blau erzeugt.</p>
+    <p>Die Intensität jeder Grundfarbe wird üblicherweise auf einer Skala von 0 bis 255 gemessen, wobei 0 für keine Intensität steht und 255 für maximale Intensität.Zum Beispiel ergibt die Kombination von voller Intensität (255) von Rot, Grün und Blau die Farbe Weiß, während keine Intensität (0) für alle drei Farben die Farbe Schwarz ergibt.</p>
+        <div id="colorMixer">
+            <!-- SVG wird hier eingefügt -->
+        </div>
+   <h3>Farben kombinieren:</h3>
+   <p>Gib die RGB-Werte ein, um die Farbe zu generieren. Der Hexadezimalcode* und die dargestellte Farbe werden automatisch aktualisiert.</p>
+    
+    <label for="redInput">Rot:</label>
+    <input type="number" id="redInput" min="0" max="255" value="255" oninput="updateColor()">
+    
+    <label for="greenInput">Grün:</label>
+    <input type="number" id="greenInput" min="0" max="255" value="255" oninput="updateColor()">
+    
+    <label for="blueInput">Blau:</label>
+    <input type="number" id="blueInput" min="0" max="255" value="255" oninput="updateColor()">
+    <div id="colorBox"></div>
+
+    <div id="hexCode"></div>
+    <p><i>* Hexadezimalcode ist ein Zahlensystem mit der Basis 16, das Zahlen mit den Zeichen 0-9 und den Buchstaben A-F repräsentiert. Im Zusammenhang mit HTML wird Hexadezimalcode häufig für die Darstellung von Farben verwendet, insbesondere im RGB-Farbmodell. In HTML können Farben durch Hexadezimalcode dargestellt werden, indem der Code mit einem Hashtag (#) beginnt, gefolgt von sechs Hexadezimalziffern. Jede Ziffer repräsentiert dabei einen Teil der Farbe im RGB-Modell (zwei Ziffern für Rot, zwei für Grün und zwei für Blau).</i></p>
+
+    </div>   
+    <script src="script.js"></script>
+</body>
+</html>
